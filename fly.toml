@@ -1,30 +1,23 @@
-# fly.toml app configuration file generated for cashflow-streamlit-app-2-cvc5ma on 2026-03-25T09:49:21Z
+# fly.toml app configuration file generated for cashflow-streamlit-app-2 on 2026-04-01T14:12:11Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "cashflow-streamlit-app-2-cvc5ma"
-primary_region = "fra"
+app = 'cashflow-streamlit-app-2'
+primary_region = 'cdg'
 
 [build]
 
 [http_service]
-  internal_port = 8501
+  internal_port = 8080
   force_https = true
-  auto_stop_machines = false
+  auto_stop_machines = 'stop'
   auto_start_machines = true
-  min_machines_running = 1
-  processes = ["app"]
-
-  [[http_service.checks]]
-    grace_period = "10s"
-    interval = "30s"
-    method = "GET"
-    timeout = "5s"
-    path = "/_stcore/health"
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  memory = "1gb"
-  cpu_kind = "shared"
+  memory = '1gb'
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
