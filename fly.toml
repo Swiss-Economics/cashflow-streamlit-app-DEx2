@@ -4,7 +4,7 @@
 #
 
 app = 'cashflow-streamlit-app-DEx2'
-primary_region = 'cdg'
+primary_region = 'ams'
 
 [build]
 
