@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'cashflow-streamlit-app-2'
+app = 'cashflow-streamlit-app-DEx2'
 primary_region = 'cdg'
 
 [build]
